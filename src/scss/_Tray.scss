@@ -1,0 +1,41 @@
+@import 'utils';
+
+.tray {
+    @include flex-center;
+    height: 4.188rem;
+    position: fixed;
+    bottom: 60px;
+    left: calc(273px + (100vw - 273px) / 2);
+    transform: translateX(-50%);
+    border-radius: 24px;
+    background-color: $grey-active;
+    padding: 0 0.2rem;
+    margin: auto;
+    z-index: 3;
+    ul {
+        @include flex-row;
+        list-style: none;
+    }
+    li {
+        margin: 2.5rem;
+    }
+
+    a {
+        @include flex-center;
+        color: $dark;
+        transition: $ei;
+        padding: 0.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover {
+            transition: $ei;
+            background-color: $grey;
+            border-radius: 30px;
+            padding: 0.5rem 1rem;
+        }
+    }
+}
+
+.icon {
+    font-size: 2rem;
+}

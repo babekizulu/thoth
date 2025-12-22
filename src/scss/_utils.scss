@@ -1,0 +1,120 @@
+//mixins
+@mixin wh100 {
+    width: 100%;
+    height: 100%;
+}
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin flex-center-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+@mixin flex-row {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin flex-column-left {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin grid1 {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+@mixin grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+@mixin grid3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+@mixin grid4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+//colors
+$light: #fff;
+$light-active: #EAEAEA;
+$secondary: #EEEEEE;
+$secondary-active: #DFDFDF;
+$grey: #C9C9C9;
+$grey-active: #D9D9D9;
+$dark: #000000;
+$dark-alpha: #00000025;
+$dark-active: #303030;
+$thoth-blue: #00223F;
+$blue: #3DB4E6;
+//fonts
+$int: 'Inter', sans-serif;
+$rob: "Roboto", sans-serif;
+$gsans: "Google Sans", sans-serif;
+$osans: "Open Sans", sans-serif;
+$wsans: "Work Sans", sans-serif;;
+//transitions
+$e: all 0.2s ease;
+$ei: all 0.2s ease-in;
+$eio: all 0.2s ease-in-out;
+$eo: all 0.2s ease-out;
+//breakpoints
+$tablet-xlarge: 1280px;
+$tablet-large: 1024px;
+$tablet-medium: 912px;
+$tablet: 853px;
+$tablet-small: 820px;
+$tablet-xsmall: 768px;
+$mobile-xlarge: 540px;
+$mobile-large: 430px;
+$mobile-medium: 414px;
+$mobile: 412px;
+$mobile-small: 390px;
+$mobile-xsmall: 375px;
+$mobile-xxsmall: 360px;
+$mobile-tiny: 344px;
+

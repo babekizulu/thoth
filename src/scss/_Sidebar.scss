@@ -1,0 +1,49 @@
+@import 'utils';
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 273px;
+    height: 100vh;
+    background-color: $secondary;
+    z-index: 3;
+
+    ul {
+        @include flex-column-left;
+        position: absolute;
+        top: 60px;
+        list-style: none;
+    }
+
+    li {
+        margin: 2rem 0;
+    }
+
+    a {
+        @include flex-center-left;
+        text-decoration: none;
+        color: $thoth-blue;
+        padding: 0.8rem 1.8rem;
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 1.4rem;
+        cursor: pointer;
+        transition: $eio;
+        &:hover {
+            background: $secondary-active;
+            transition: $eio;
+            transform: translateX(1rem);
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 30px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 15px;
+        }
+    }
+}
+
+.sidebar-icon {
+    font-size: 2rem;
+    margin-right: 2rem;
+}
+

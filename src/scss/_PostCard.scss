@@ -1,0 +1,111 @@
+@import 'utils';
+
+.post-card {
+    width: 1150px;
+    max-height: 450px;
+    border-radius: 39px;
+    background-color: $light;
+    box-shadow: 0 4px 4px 0 $dark-alpha;
+    padding: 2rem;
+    margin: 2rem auto;
+}
+
+.framework-metadata {
+    @include flex-row;
+    img {
+        max-width: 318px;
+    }
+}
+
+.framework-description {
+    margin-left: 2rem;
+    h3 {
+        text-align: left;
+        font-family: $gsans;
+        font-size: 2rem;
+    }
+    p {
+        text-align: justify;
+        padding: 1rem 0;
+        font-size: 1.4rem;
+    }
+}
+
+.framework-thumbnail {
+    width: 240px;
+    height: 240px;
+    border-radius: 21px;
+    background-color: $grey-active;
+}
+
+.interaction-bar {
+    width: 1150px;
+    @include flex-row;
+    margin-top: 2rem;
+    button {
+        background: none;
+        border: none;
+    }
+}
+
+.vote-cluster {
+    @include flex-row;
+    margin: 0 2rem;
+}
+
+.open-btn-container {
+    @include flex-center;
+    margin: auto;
+}
+
+#openBtn {
+    background: $dark;
+    color: $light;
+    font-size: 1.4rem;
+    font-family: $gsans;
+    border-radius: 30px;
+    padding: 0.8rem 1.4rem;
+    cursor: pointer;
+    transition: $eio;
+    &:hover {
+        background: $dark-active;
+        padding: 0.8rem 2rem;
+        transition: $eio;
+    }
+}
+
+.interaction-btn-container {
+    a {
+        @include flex-center;
+        text-decoration: none;
+        color: $dark;
+        padding: 0.5rem;
+        border-radius: 50%;
+        transition: $eio;
+        cursor: pointer;
+        &:hover {
+            background-color: $light-active;
+            transition: $eio;
+        }
+    }
+    button {
+        @include flex-center;
+        text-decoration: none;
+        color: $dark;
+        padding: 0.5rem;
+        border-radius: 50%;
+        transition: $eio;
+        cursor: pointer;
+        margin: 0 2rem;
+        &:hover {
+            background-color: $light-active;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            transition: $eio;
+        }
+    }
+}
+
+.interaction-icon {
+    font-size: 40px;
+}

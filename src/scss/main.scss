@@ -1,0 +1,26 @@
+@import 'utils';
+
+*::before, *::after, * {
+    @include reset;
+};
+
+body {
+    @include wh100;
+    font-family: $int;
+    background-color: $grey;
+}
+
+.app {
+    @include wh100;
+}
+
+@import 'Header';
+@import 'Search';
+@import 'Navigation';
+@import 'Sidebar';
+@import 'Page';
+@import 'Tray';
+@import 'PostCard';
+@import 'Create';
+@import 'Dashboard';
+@import 'Network';
