@@ -1,5 +1,3 @@
-//libs
-import {useState} from 'react';
 //components
 import MetadataCard from './MetadataCard';
 //custom hooks
