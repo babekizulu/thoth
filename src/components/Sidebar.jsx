@@ -40,6 +40,18 @@ function Sidebar() {
                     </li>
                 </ul>
             </nav>
+            <div className='profile-nav-container'>
+            <hr/>
+                <Link href='/profile' className='sidebar-profile-nav'>
+                    <div className='sidebar-profile-picture'>
+                        S
+                        {/*PROFILE PICTURE*/}
+                    </div>
+                    <p>
+                        @saerbridge
+                    </p>
+                </Link>
+            </div>
         </aside>
     );
 };

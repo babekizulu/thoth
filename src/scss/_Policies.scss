@@ -1,0 +1,17 @@
+@import 'utils';
+
+.add-policy-button {
+    background: none;
+    border: none;
+    margin: 5rem 2rem 1rem 5rem;
+    cursor: pointer;
+    transition: $eio;
+    &:hover {
+        color: $dark-active;
+        transition: $eio;
+    }
+}
+
+.add-icon {
+    font-size: 10rem;
+}

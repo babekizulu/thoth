@@ -5,6 +5,7 @@ import Sidebar from './components/Sidebar';
 import Tray from './components/Tray';
 //pages
 import Feed from './components/Feed/Feed';
+import Policies from './components/Policies/Policies';
 import Create from './components/Create/Create';
 import Search from './components/Search/Search';
 import Network from './components/Network/Network';
@@ -16,6 +17,9 @@ function App() {
             <Header/>
             <Route path='/'>
                 <Feed/>
+            </Route>
+            <Route path='/policies'>
+                <Policies/>
             </Route>
             <Route path='/create'>
                 <Create/>

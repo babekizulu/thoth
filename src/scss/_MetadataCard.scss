@@ -1,0 +1,100 @@
+@import 'utils';
+
+.metadata-card {
+    @include flex-column;
+    position: relative;
+    top: 35%;
+    bottom: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 430px;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    border-radius: 30px;
+    background-color: $light;
+    z-index: 2;
+    box-shadow: 0 4px 4px 0 $dark-alpha;
+
+    button {
+        background-color: transparent;
+        border: none;
+    }
+}
+
+.upload-metadata {
+    @include flex-around;
+    gap: 8rem;
+}
+
+.upload-thumbnail-container {
+    @include flex-center;
+    position: relative;
+    left: 0;
+    width: 218.45px;
+    height: 309px;
+    border-radius: 30px;
+    background-color: $light-active;
+
+    button {
+        cursor: pointer;
+        color: $thoth-blue;
+        transition: $eio;
+        &:hover {
+            color: $thoth-blue-active;
+            transition: $eio;
+        }
+    }
+}
+
+.upload-file-container {
+    @include flex-column;
+    margin: 2rem 4rem 2rem 2rem;
+    button {
+        background-color: $dark;
+        color: $light;
+        padding: 0.8rem 1.8rem;
+        border-radius: 15px;
+        font-family: $gsans;
+        font-size: 1.4rem;
+        cursor: pointer;
+        transition: $eio;
+        &:hover {
+            background-color: $dark-active;
+            transition: $eio;
+        }
+    }
+    
+    em {
+        margin-top: 1rem;
+    }
+}
+
+.upload-icon {
+    font-size: 3rem;
+}
+
+.save-btn-container {
+    @include flex-center;
+    position: relative;
+    right: 0;
+    //width: 100%;
+    margin-right: 2rem;
+
+    button {
+        padding: 0.8rem 1.2rem;
+        background: $dark;
+        color: $light;
+        font-family: $gsans;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: $eio;
+        &:hover {
+            transition: $eio;
+            padding: 0.8rem 1.8rem;
+            background-color: $dark-active;
+        }
+    }
+}
