@@ -64,7 +64,7 @@
 }
 
 .sidebar-profile-nav {
-    @include flex-row;
+    @include flex-row-center;
     padding: 1rem 0;
         transition: $eio;
         cursor: pointer;

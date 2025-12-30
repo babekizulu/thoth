@@ -1,7 +1,7 @@
 @import 'utils';
 
 .metadata-card {
-    @include flex-column;
+    @include flex-column-center;
     position: relative;
     top: 35%;
     bottom: 65%;
@@ -51,7 +51,7 @@
 }
 
 .upload-file-container {
-    @include flex-column;
+    @include flex-column-center;
     margin: 2rem 4rem 2rem 2rem;
     button {
         background-color: $dark;

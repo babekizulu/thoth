@@ -26,6 +26,11 @@
 
 @mixin flex-row {
     display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-row-center {
+    display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: center;
@@ -34,10 +39,7 @@
 
 @mixin flex-column {
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
 }
 
 @mixin flex-column-left {
@@ -46,6 +48,14 @@
     flex-direction: column;
     align-items: center;
     text-align: left;
+}
+
+@mixin flex-column-center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
 }
 
 @mixin flex-between {
@@ -92,6 +102,7 @@ $dark-active: #303030;
 $thoth-blue: #00223F;
 $thoth-blue-active: #024b8b;
 $blue: #3DB4E6;
+$success: rgb(50, 212, 50);
 //fonts
 $int: 'Inter', sans-serif;
 $rob: "Roboto", sans-serif;
@@ -104,7 +115,7 @@ $ei: all 0.2s ease-in;
 $eio: all 0.2s ease-in-out;
 $eo: all 0.2s ease-out;
 //breakpoints
-$tablet-xlarge: 1280px;
+$desktop: 1280px;
 $tablet-large: 1024px;
 $tablet-medium: 912px;
 $tablet: 853px;

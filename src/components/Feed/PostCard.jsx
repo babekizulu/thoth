@@ -2,17 +2,49 @@
 import {useState} from 'react';
 //components
 import Link from "../Link";
+import Comments from './Comments';
+//custom hooks
+import useThothContext from '../../hooks/use-thoth-context';
 //icons
 import { TbMessageReport } from "react-icons/tb";
 import { MdClose, MdOutlineIosShare } from 'react-icons/md';
 import { IoCheckmarkSharp, IoHammerOutline, IoDownloadOutline } from 'react-icons/io5';;
-import { FaBookmark, FaRegBookmark } from 'react-icons/fa';
+import { FaBookmark, FaRegBookmark, FaRegCommentAlt } from 'react-icons/fa';
+import { RiArrowDropDownLine } from 'react-icons/ri';
 
 function PostCard() {
+    //context management
+    const {setToggleTray, toggleTray, comments} = useThothContext();
+    //state management
     const [bookmarked, setBookmarked] = useState(false);
+    const [toggleComments, setToggleComments] = useState(false);
+    const [commentSortOption, setCommentSortOption] = useState('Most relevant');
+    const [commentSortOptionsToggled, setCommentSortOptionsToggled] = useState(false);
+    //variables
+    const optionsArr = ['Most relevant', 'Most recent', 'Most liked'];
     //handlers
     const handleBookmark = () => {
         setBookmarked(!bookmarked);
+    }
+    //handlers
+    const handleSortComments = () => {
+        if(commentSortOption == 'Most relevant') {
+            comments.sort((a,b) => a.likes - b.likes);
+        }
+        if(commentSortOption == 'Most recent') {
+            comments.sort((a,b) => Date.parse(a.timestamp) - Date.parse(b.timestamp));
+        }
+        if(commentSortOption == 'Most liked') {
+            comments.sort((a,b) => a.replies - b.replies);
+        }
+    }
+    const handleToggleComments = () => {
+        setToggleComments(!toggleComments);
+        handleSortComments();
+    }
+    const handleCommentSortOptionsToggle = () => {
+        setCommentSortOptionsToggled(!commentSortOptionsToggled);
+        setToggleTray(!toggleTray);
     }
     return (
         <article className='post-card'>
@@ -58,6 +90,11 @@ function PostCard() {
                     </button>
                 </div>
                 <div className='interaction-btn-container'>
+                    <button className='interaction-btn' onClick={handleToggleComments}>
+                        <FaRegCommentAlt className='interaction-icon'/>
+                    </button>
+                </div>
+                <div className='interaction-btn-container'>
                     <button className='interaction-btn'>
                         <MdOutlineIosShare className='interaction-icon'/>
                     </button>
@@ -73,6 +110,15 @@ function PostCard() {
                     </button>
                 </div>
             </div>
+            {toggleComments ? <Comments 
+            handleCommentSortOptionsToggle={handleCommentSortOptionsToggle} 
+            commentSortOption={commentSortOption}
+            commentSortOptionsToggled={commentSortOptionsToggled}
+            optionsArr={optionsArr}
+            setCommentSortOption={setCommentSortOption}
+            setCommentSortOptionsToggled={setCommentSortOptionsToggled}
+            comments={comments}
+            /> : ''}
         </article>
     );
 };

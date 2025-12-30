@@ -9,9 +9,12 @@ import Policies from './components/Policies/Policies';
 import Create from './components/Create/Create';
 import Search from './components/Search/Search';
 import Network from './components/Network/Network';
+//custom hooks
+import useThothContext from './hooks/use-thoth-context';
 
 
 function App() {
+    const {toggleTray} = useThothContext();
     return (
         <div className='app'>
             <Header/>
@@ -31,7 +34,7 @@ function App() {
                 <Network/>
             </Route>
             <Sidebar/>
-            <Tray/>
+            {toggleTray ? <Tray/> : ''}
         </div>
     );
 }

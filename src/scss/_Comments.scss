@@ -1,0 +1,32 @@
+@import 'utils';
+
+.comments {
+    @include flex-column;
+    width: 100%;
+    border-top: 1px solid $secondary-active;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.toggle-comment-sort-options {
+    @include flex-row-center;
+    position: relative;
+    left: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.comment-sort-options-icon {
+    font-size: 2rem;
+}
+
+.comment {
+    @include flex-row;
+    position: relative;
+    left: 0;
+    margin-bottom: 0.4rem;
+    b {
+        margin-right: 1rem;
+    }
+}
